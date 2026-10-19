@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Messenger</title>
+  </head>
+  <body>
+    <nav>
+      <h4>Message</h4>
+      <div id="navUser" class="hidden">
+        <span id="meName"></span>
+        <button id="logoutBtn" class="link">Log out</button>
+      </div>
+    </nav>
+
+    <section id="authSection">
+      <div class="box" id="loginf">
+        <input type="email" placeholder="Email" id="logEmail" />
+        <input type="password" placeholder="Password" id="logPassword" />
+        <button id="loginBas">Log In</button>
+        <p>No account? <button class="link" id="regOpen">Register</button></p>
+      </div>
+
+      <div class="box hidden" id="registerf">
+        <input type="text" placeholder="Username" id="regUsername" />
+        <input type="email" placeholder="Email" id="regEmail" />
+        <input type="password" placeholder="Password" id="regPassword" />
+        <button id="registerBas">Register</button>
+        <p>
+          Have an account? <button class="link" id="logOpen">Log In</button>
+        </p>
+      </div>
+
+      <p id="authMsg"></p>
+    </section>
+
+    <section id="chatSection" class="hidden">
+      <aside>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Find by username or email"
+        />
+        <div id="searchResults"></div>
+        <h5>Chats</h5>
+        <div id="conversations"></div>
+      </aside>
+
+      <main>
+        <div id="chatHeader">Select a chat</div>
+        <div id="messages"></div>
+        <div id="sendRow" class="hidden">
+          <input type="text" id="messageInput" placeholder="Type a message" />
+          <button id="sendBtn">Send</button>
+        </div>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
